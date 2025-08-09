@@ -27,12 +27,11 @@ const connectMongodb = async () => {
   }
 };
 
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://fiverr-web.netlify.app"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: ["http://localhost:5173", "https://splendid-jalebi-e33003.netlify.app"],
+  credentials: true,
+}));
+
 // Handle preflight requests
 app.options("*", cors());
 app.use(express.json());
